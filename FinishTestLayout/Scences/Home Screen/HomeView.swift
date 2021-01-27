@@ -61,6 +61,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var size: CGSize
+        //calculate item height size of cell.
         let itemWidth = (collectionView.frame.width / 2) - 10
         let LabelWidth = (collectionView.frame.width / 2) - 30
         let nameHeight = (presenter?.screenItems?[indexPath.row].name ?? "").textHeight(width: LabelWidth, fontSize: 17)

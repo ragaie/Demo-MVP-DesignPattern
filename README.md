@@ -4,7 +4,7 @@
 
  This demo contain only one screen showing list of dat form api, and show offline data when network down.
 
-Layout not Preaty one, i tried to maked it  as simple i can.
+Layout not pretty one, i tried to maked it  as simple i can.
 
 ## Here how i organized folder inside demo:
 
