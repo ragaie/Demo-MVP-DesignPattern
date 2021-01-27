@@ -7,16 +7,18 @@
 
 import UIKit
 //cell id --> homeCellId
-
 class HomeView: UIViewController {
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var errorMessage: UILabel!
     var presenter : HomePresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
        setUp()
         presenter = HomePresenter(serviceModel: ServiceManager())
         presenter?.view = self
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Repos list"
         // Do any additional setup after loading the view.
         presenter?.getData()
     }
@@ -31,16 +33,16 @@ class HomeView: UIViewController {
 }
 extension HomeView: HomeDelegate{
     func updateScreenWithData() {
+        collectionView.isHidden = false
         collectionView.reloadData()
         loaderView.isHidden = true
     }
     
     func gotAnError(error: String) {
-        
+        loaderView.isHidden = true
+        collectionView.isHidden = true
+        errorMessage.text = error
     }
-    
- 
-    
 }
 
 extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -58,26 +60,14 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-       let vvv =  (presenter?.screenItems?[indexPath.row].description as! NSString).size(withAttributes: nil)
-     // print(vvv)
-      //  var height = (vvv.width / ((collectionView.frame.width / 2) - 10)) * vvv.height
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCellId", for: indexPath) as? HomeCollectionViewCell
-
-        
-        let itemSize = presenter?.screenItems?[indexPath.row].description?.size(withAttributes: [
-                 NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12)
-             ])
-        let itemSize1 = presenter?.screenItems?[indexPath.row].name?.size(withAttributes: [
-                 NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
-             ])
-        print(itemSize)
-        var height = (itemSize!.width / ((collectionView.frame.width / 2) )) * itemSize!.height
-        var height1 = (itemSize1!.width / ((collectionView.frame.width / 2) )) * itemSize1!.height
-
         var size: CGSize
-        size = CGSize.init(width: (collectionView.frame.width / 2) - 10, height: height + height1 + 200)
+        let itemWidth = (collectionView.frame.width / 2) - 10
+        let LabelWidth = (collectionView.frame.width / 2) - 20
+        let nameHeight = (presenter?.screenItems?[indexPath.row].name ?? "").textHeight(width: LabelWidth, fontSize: 17)
+        let descHeight = (presenter?.screenItems?[indexPath.row].description ?? "").textHeight(width: LabelWidth, fontSize: 12)
+        size = CGSize.init(width: itemWidth,  height: nameHeight  + descHeight + 190)
         return size
     }
 }
+
 

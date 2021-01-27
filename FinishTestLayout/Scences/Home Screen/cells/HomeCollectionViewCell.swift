@@ -25,8 +25,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
             forkNumber.text = String(item.forks_count ?? 0)
             LoadImageWith(url: item.owner?.avatar_url ?? "")
             forkIcon.tintColor = (item.forks_count ?? 0) > 0 ? .green : .white
-            avatarUrl.setTitle(item.owner?.avatar_url ?? "", for: .normal)
-   
+           // avatarUrl.setTitle(item.owner?.avatar_url ?? "", for: .normal)
+        
         }
         
     }
@@ -50,3 +50,5 @@ class HomeCollectionViewCell: UICollectionViewCell {
             UIApplication.shared.open(url)
         }    }
 }
+
+

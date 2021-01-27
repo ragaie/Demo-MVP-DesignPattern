@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkU-DE-wnD">
+                                <rect key="frame" x="10" y="465" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AF5-NJ-BEm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="AcR-JL-GDb">
                                     <size key="itemSize" width="239" height="283"/>
@@ -55,15 +61,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJx-4T-BZc">
-                                                    <rect key="frame" x="53" y="253.5" width="9" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <rect key="frame" x="44" y="255" width="8" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-li-XHr">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-li-XHr">
                                                     <rect key="frame" x="15" y="195.5" width="209" height="45.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <state key="normal" title="url"/>
+                                                    <state key="normal" title="Avatar Url."/>
                                                     <connections>
                                                         <action selector="openImage:" destination="Tid-zx-cpN" eventType="touchUpInside" id="LJj-wE-bGw"/>
                                                     </connections>
@@ -90,7 +96,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="iJ6-w6-Jm1" secondAttribute="trailing" constant="15" id="Tj3-Cg-Opc"/>
                                                 <constraint firstItem="6tt-3F-TLV" firstAttribute="leading" secondItem="4bL-ns-KQb" secondAttribute="leading" constant="15" id="aCj-gp-WQh"/>
                                                 <constraint firstItem="ALf-VQ-JYU" firstAttribute="top" secondItem="qmv-li-XHr" secondAttribute="bottom" constant="8" id="d6P-CJ-aY0"/>
-                                                <constraint firstItem="gJx-4T-BZc" firstAttribute="leading" secondItem="ALf-VQ-JYU" secondAttribute="trailing" constant="14" id="g7w-sT-llI"/>
+                                                <constraint firstItem="gJx-4T-BZc" firstAttribute="leading" secondItem="ALf-VQ-JYU" secondAttribute="trailing" constant="5" id="g7w-sT-llI"/>
                                                 <constraint firstAttribute="bottom" secondItem="ALf-VQ-JYU" secondAttribute="bottom" constant="8" id="ixA-jh-bZw"/>
                                                 <constraint firstAttribute="trailing" secondItem="qmv-li-XHr" secondAttribute="trailing" constant="15" id="jZI-2u-EKM"/>
                                                 <constraint firstItem="wMb-XT-v9o" firstAttribute="top" secondItem="4bL-ns-KQb" secondAttribute="top" id="mLf-zG-F2y"/>
@@ -143,15 +149,19 @@
                             <constraint firstItem="3Tl-Gg-7Vp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5cN-Ch-lzk"/>
                             <constraint firstItem="AF5-NJ-BEm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6Qi-d6-Ko0"/>
                             <constraint firstItem="AF5-NJ-BEm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6rH-4N-G47"/>
-                            <constraint firstItem="AF5-NJ-BEm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="fFA-gV-Opu"/>
+                            <constraint firstItem="AF5-NJ-BEm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fFA-gV-Opu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AF5-NJ-BEm" secondAttribute="trailing" id="fMo-aa-vwt"/>
+                            <constraint firstItem="OkU-DE-wnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fPO-8i-92W"/>
+                            <constraint firstItem="OkU-DE-wnD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kWW-EH-4dS"/>
                             <constraint firstItem="3Tl-Gg-7Vp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nEv-TP-6lc"/>
                             <constraint firstItem="AF5-NJ-BEm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u6m-ta-lrb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OkU-DE-wnD" secondAttribute="trailing" constant="10" id="vv5-Ix-xFs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L3Q-zn-8vX"/>
                     <connections>
                         <outlet property="collectionView" destination="AF5-NJ-BEm" id="Zq9-8Q-Wdo"/>
+                        <outlet property="errorMessage" destination="OkU-DE-wnD" id="hHX-BB-Tcm"/>
                         <outlet property="loaderView" destination="3Tl-Gg-7Vp" id="EHi-uw-hVM"/>
                     </connections>
                 </viewController>
