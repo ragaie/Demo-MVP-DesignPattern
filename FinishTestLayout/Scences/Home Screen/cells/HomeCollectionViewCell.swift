@@ -23,8 +23,30 @@ class HomeCollectionViewCell: UICollectionViewCell {
             repoName.text = item.name ?? ""
             repoDescription.text = item.description ?? ""
             forkNumber.text = String(item.forks_count ?? 0)
-        
+            LoadImageWith(url: item.owner?.avatar_url ?? "")
+            forkIcon.tintColor = (item.forks_count ?? 0) > 0 ? .green : .white
+            avatarUrl.setTitle(item.owner?.avatar_url ?? "", for: .normal)
+   
         }
         
     }
+    func LoadImageWith(url:String){
+        // Create URL
+         let url = URL(string: url)!
+
+         DispatchQueue.global().async {
+             // Fetch Image Data
+             if let data = try? Data(contentsOf: url) {
+                 DispatchQueue.main.async {
+                     // Create Image and Update Image View
+                     self.avatarImage.image = UIImage(data: data)
+                 }
+             }
+         }
+    }
+ 
+    @IBAction func openImage(_ sender: Any) {
+        if let url = URL(string: model?.owner?.avatar_url ?? "") {
+            UIApplication.shared.open(url)
+        }    }
 }

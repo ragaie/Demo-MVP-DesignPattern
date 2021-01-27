@@ -58,8 +58,26 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+       let vvv =  (presenter?.screenItems?[indexPath.row].description as! NSString).size(withAttributes: nil)
+     // print(vvv)
+      //  var height = (vvv.width / ((collectionView.frame.width / 2) - 10)) * vvv.height
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCellId", for: indexPath) as? HomeCollectionViewCell
+
+        
+        let itemSize = presenter?.screenItems?[indexPath.row].description?.size(withAttributes: [
+                 NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12)
+             ])
+        let itemSize1 = presenter?.screenItems?[indexPath.row].name?.size(withAttributes: [
+                 NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
+             ])
+        print(itemSize)
+        var height = (itemSize!.width / ((collectionView.frame.width / 2) )) * itemSize!.height
+        var height1 = (itemSize1!.width / ((collectionView.frame.width / 2) )) * itemSize1!.height
+
         var size: CGSize
-        size = CGSize.init(width: (collectionView.frame.width / 2) - 10, height: 300)
+        size = CGSize.init(width: (collectionView.frame.width / 2) - 10, height: height + height1 + 200)
         return size
     }
 }
+

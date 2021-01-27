@@ -25,6 +25,7 @@ class HomePresenter: NSObject,HomePresenterDelegate{
                 self.screenItems = object
                 self.view?.updateScreenWithData()
             } else if error != nil {
+                
                 self.view?.gotAnError(error:  error?.localizedDescription ?? "")
             }
         })
