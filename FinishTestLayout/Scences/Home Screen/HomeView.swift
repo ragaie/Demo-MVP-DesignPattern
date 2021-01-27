@@ -14,11 +14,9 @@ class HomeView: UIViewController {
     var presenter : HomePresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-       setUp()
+        setUp()
         presenter = HomePresenter(serviceModel: ServiceManager())
         presenter?.view = self
-        navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Repos list"
         // Do any additional setup after loading the view.
         presenter?.getData()
     }
@@ -26,11 +24,13 @@ class HomeView: UIViewController {
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = .zero
         }
-
         collectionView.delegate = self
         collectionView.dataSource = self
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Repos list"
     }
 }
+
 extension HomeView: HomeDelegate{
     func updateScreenWithData() {
         collectionView.isHidden = false
@@ -62,10 +62,10 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var size: CGSize
         let itemWidth = (collectionView.frame.width / 2) - 10
-        let LabelWidth = (collectionView.frame.width / 2) - 20
+        let LabelWidth = (collectionView.frame.width / 2) - 30
         let nameHeight = (presenter?.screenItems?[indexPath.row].name ?? "").textHeight(width: LabelWidth, fontSize: 17)
         let descHeight = (presenter?.screenItems?[indexPath.row].description ?? "").textHeight(width: LabelWidth, fontSize: 12)
-        size = CGSize.init(width: itemWidth,  height: nameHeight  + descHeight + 190)
+        size = CGSize.init(width: itemWidth,  height: nameHeight  + descHeight + 200)
         return size
     }
 }
