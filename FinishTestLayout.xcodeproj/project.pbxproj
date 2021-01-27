@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF10E46125C19AA800F66C66 /* CachedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10E46025C19AA800F66C66 /* CachedData.swift */; };
-		DF10E46425C19CC500F66C66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10E46325C19CC500F66C66 /* Reachability.swift */; };
+		DF10E46425C19CC500F66C66 /* Reachability+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10E46325C19CC500F66C66 /* Reachability+Internet.swift */; };
 		DF10E46725C1AE6700F66C66 /* Foundation+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10E46625C1AE6700F66C66 /* Foundation+Extentions.swift */; };
 		DF10E46A25C1B4DD00F66C66 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF10E46925C1B4DD00F66C66 /* README.md */; };
 		DF8D541525C15DD500E8F3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D541425C15DD500E8F3C4 /* AppDelegate.swift */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		DF10E46025C19AA800F66C66 /* CachedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedData.swift; sourceTree = "<group>"; };
-		DF10E46325C19CC500F66C66 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DF10E46325C19CC500F66C66 /* Reachability+Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+Internet.swift"; sourceTree = "<group>"; };
 		DF10E46625C1AE6700F66C66 /* Foundation+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extentions.swift"; sourceTree = "<group>"; };
 		DF10E46925C1B4DD00F66C66 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF8D541125C15DD500E8F3C4 /* FinishTestLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinishTestLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF10E46C25C1B51300F66C66 /* Cached */ = {
+			isa = PBXGroup;
+			children = (
+				DF10E46025C19AA800F66C66 /* CachedData.swift */,
+			);
+			path = Cached;
+			sourceTree = "<group>";
+		};
 		DF8D540825C15DD500E8F3C4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +85,7 @@
 		DF8D541325C15DD500E8F3C4 /* FinishTestLayout */ = {
 			isa = PBXGroup;
 			children = (
+				DF10E46C25C1B51300F66C66 /* Cached */,
 				DF8D545925C165F300E8F3C4 /* ServiceLayer & endPoints */,
 				DF8D544E25C15E8100E8F3C4 /* Scences */,
 				DF8D544D25C15E6B00E8F3C4 /* AppDelegate */,
@@ -127,10 +136,9 @@
 		DF8D545925C165F300E8F3C4 /* ServiceLayer & endPoints */ = {
 			isa = PBXGroup;
 			children = (
-				DF10E46025C19AA800F66C66 /* CachedData.swift */,
 				DF8D545D25C1662000E8F3C4 /* EndPoints.swift */,
 				DF8D545A25C1661600E8F3C4 /* ServiceManager.swift */,
-				DF10E46325C19CC500F66C66 /* Reachability.swift */,
+				DF10E46325C19CC500F66C66 /* Reachability+Internet.swift */,
 				DF10E46625C1AE6700F66C66 /* Foundation+Extentions.swift */,
 			);
 			path = "ServiceLayer & endPoints";
@@ -232,7 +240,7 @@
 				DF10E46725C1AE6700F66C66 /* Foundation+Extentions.swift in Sources */,
 				DF8D546E25C16A1B00E8F3C4 /* OwnerEntity.swift in Sources */,
 				DF8D547125C1778C00E8F3C4 /* HomeCollectionViewCell.swift in Sources */,
-				DF10E46425C19CC500F66C66 /* Reachability.swift in Sources */,
+				DF10E46425C19CC500F66C66 /* Reachability+Internet.swift in Sources */,
 				DF8D541525C15DD500E8F3C4 /* AppDelegate.swift in Sources */,
 				DF8D546325C1670F00E8F3C4 /* HomePresenter.swift in Sources */,
 				DF8D545B25C1661600E8F3C4 /* ServiceManager.swift in Sources */,
