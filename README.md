@@ -1,10 +1,10 @@
 # This demo using MVP Desgin pattern :-
 
-## All comuncation between layers done throw protocols.
+ All comuncation between layers done throw protocols.
 
-## this demo contain only one screen showing list of dat form api, and show offline data when network down.
+ This demo contain only one screen showing list of dat form api, and show offline data when network down.
 
-##Layout not Preaty one, i tried to maked it  as simple i can.
+Layout not Preaty one, i tried to maked it  as simple i can.
 
 ## There is many another layer just for supporting demo app not compitable with real app.
 
