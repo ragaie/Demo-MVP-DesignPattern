@@ -18,6 +18,7 @@
 		DF8D546625C167A600E8F3C4 /* HomeProtocals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D546525C167A600E8F3C4 /* HomeProtocals.swift */; };
 		DF8D546A25C168B000E8F3C4 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D546925C168B000E8F3C4 /* HomeEntity.swift */; };
 		DF8D546E25C16A1B00E8F3C4 /* OwnerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D546D25C16A1B00E8F3C4 /* OwnerEntity.swift */; };
+		DF8D547125C1778C00E8F3C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D547025C1778C00E8F3C4 /* HomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DF8D546525C167A600E8F3C4 /* HomeProtocals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocals.swift; sourceTree = "<group>"; };
 		DF8D546925C168B000E8F3C4 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		DF8D546D25C16A1B00E8F3C4 /* OwnerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerEntity.swift; sourceTree = "<group>"; };
+		DF8D547025C1778C00E8F3C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		DF8D544F25C15E8C00E8F3C4 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DF8D547325C1789C00E8F3C4 /* cells */,
 				DF8D546825C1688D00E8F3C4 /* Entities */,
 				DF8D541825C15DD500E8F3C4 /* HomeView.swift */,
 				DF8D546225C1670F00E8F3C4 /* HomePresenter.swift */,
@@ -128,6 +131,14 @@
 				DF8D546D25C16A1B00E8F3C4 /* OwnerEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		DF8D547325C1789C00E8F3C4 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF8D547025C1778C00E8F3C4 /* HomeCollectionViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				DF8D546A25C168B000E8F3C4 /* HomeEntity.swift in Sources */,
 				DF8D546625C167A600E8F3C4 /* HomeProtocals.swift in Sources */,
 				DF8D546E25C16A1B00E8F3C4 /* OwnerEntity.swift in Sources */,
+				DF8D547125C1778C00E8F3C4 /* HomeCollectionViewCell.swift in Sources */,
 				DF8D541525C15DD500E8F3C4 /* AppDelegate.swift in Sources */,
 				DF8D546325C1670F00E8F3C4 /* HomePresenter.swift in Sources */,
 				DF8D545B25C1661600E8F3C4 /* ServiceManager.swift in Sources */,

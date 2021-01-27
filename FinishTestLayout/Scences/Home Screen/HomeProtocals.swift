@@ -13,6 +13,7 @@ protocol  HomeDelegate: NSObjectProtocol {
 
 protocol  HomePresenterDelegate: NSObjectProtocol {
     var view :HomeDelegate? { get set }
- 
+    var screenItems: [HomeEntity]? {get set}
+
     func getData()
 }

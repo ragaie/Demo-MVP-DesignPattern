@@ -11,4 +11,5 @@ struct HomeEntity: Codable {
     var name: String?
     var description: String?
     var forks_count: Int?
+    var owner: OwnerEntity?
 }
